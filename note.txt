@@ -1,0 +1,47 @@
+what is django
+what is it use for
+the routing
+template
+static
+view
+model
+urls
+
+django is a python base web framework. it a backend framework (meaning it on the server side). this means that python can be use to build website.
+python is one of the top programming language and django is one of the top web framework
+we have other python frameworks like flask, cherry pie, web2py, pyramid
+
+django can be compare with php in laravel, rubby in rales, express for nodejs
+
+another thing is that it uses the MVT pattern: model view template.
+
+web framework is a collection of modules, packages and library design to speed up dvelopment
+
+we have frontend frameworks(client side)
+react
+angular
+vie
+
+we have backend frameworks(server side)
+php(language):laravel(rameworks)
+python:django
+nodejs:express
+
+(angular and vie with django are not in competition with each other, but then u can use any front end frame work with django just that u will neeed to create an api to connect django with the frontend framework)
+
+what can you build with django
+company that uses django: pintress, spotify, instagram, udemy, dropbox
+
+building api:if you want to build a mobile app or you want to use a front end frame work u need some api data: django has made it eazy, we have what we call django rest framework for build api
+
+mvt structure
+django documentation
+setup environment; the reason is to avoid version conflict bettwen libraries
+explain the settings(core project configuration) and urls
+do:django-admin to see all the comand we will be using
+
+app are component that handle different part of our website
+
+urls triger view and view triger the temmplate, httpresponse or a jsonreaponse
+
+search for django template engine:

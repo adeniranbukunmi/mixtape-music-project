@@ -1,0 +1,283 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Hulu</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>log__in</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/main2.css' %}">
+        <!-- <link rel="stylesheet" href="login.css"> -->
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+        <nav class="sign__Up__nav">
+            <div class="nav__img"><img src="https://signup.hulu.com/static/images/hulu-dark.svg" alt="" />
+            </div>
+            <div class="log__in">
+                <a href=""><span></span></a>
+            </div>
+        </nav>
+        <div class="account">
+            <div class="form">
+                <form action="#" method='post'>
+                    {% csrf_token %}
+
+                    <h1 class="logi">LOG IN</h1>
+                    <div class="form__text">
+                        You will use this email and password to log into your accounts for all your favorite services across The Walt Disney Family of Companies, including Disney+, Hulu and ESPN+. . <a href="#"
+                            style="text-decoration: none;color: #176EE1;">Learn More</a>
+                    </div>
+                    <div class="inputs">
+                        <div>
+                            <label for="">username</label> <br>
+                            <input type="text" name='username'>
+                        </div>
+                        <div>
+                            <label for="">password</label><br>
+                            <input type="password" name='password'>
+                        </div>
+                        <div class="forget__password"><a href="">Forgot your email or password?</a></div>
+                        <div class="button__wrapper">
+                            <button class="button">LOG IN
+                            </button>
+                        </div>
+                    </div>   
+            
+                <div class="start__for__free">
+                    <p>Don't have an account?</p>
+                    <p><a href=""> Start your free trial</a></p>
+                </div>
+        
+            
+        </div>
+        <footer>
+            <ul>
+                <li><a href=""> <img src="images/ads.png" alt="">About Ads</a> </li>
+                <li><a href="">Terms of Use</a> </li>
+                <li><a href=""> Privacy Policy</a></li>
+                <li> <a href="">©2023 Hulu, LLC</a></li> 
+            </ul>
+        </footer>
+    </body>
+
+    </html>
+</body>
+
+</html>
+
+
+{% comment %} {% extends "common_page.html" %}
+
+{% block "title" %} password reset confirm{% endblock "title" %}
+
+{% block 'body_content' %}
+<div class="count mt-5">
+<div class="row">
+    <div class="way col-md-6 col-lg-6 col-xxl-6 col-sm-12 col-xm-12">
+        <h2>
+          
+            <span> enter your new password </span>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {% load bootstrap %}
+                {{form|bootstrap_horizontal:'col-lg-6'}}
+                <input class="bc-white mt-2 ml-2 loginbutton" type="submit" value="login">
+                <a href="{% url 'password_reset' %}"> forget password</a>
+            </form>
+        </h2>
+    </div>
+</div>
+</div>
+{% endblock 'body_content' %} {% endcomment %}
+
+
+
+
+
+
+{% comment %} signup part {% endcomment %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign__Up</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/main2.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+    <nav class="sign__Up__nav">
+        <div class="nav__img"><img src="https://signup.hulu.com/static/images/hulu-dark.svg"    alt=""/>
+        </div>
+        <div class="log__in">
+            <a href="login.html" ><span>LOG IN</span></a>
+        </div>
+    </nav>
+    <div class="account">
+        <div class="Create__account">
+            <h1>Create Your Account</h1>
+            <p>Use your email and password to watch on your favorite devices.</p>
+        </div>
+        <div class="form">
+            <form action="#">
+                 <div class="form__text">
+                    You will use this email and password to log into your accounts for all your favorite services across The Walt Disney Family of Companies, including Disney+, Hulu and ESPN+. <a href="#" style="text-decoration: none;color: #176EE1;" >Learn More</a>
+                 </div>
+                 <div class="inputs">
+                    <div>
+                        {% comment %} "username",
+                        "first_name",
+                        "last_name",
+                        "email",
+                        "password1",
+                        "password2", {% endcomment %}
+                        <label for="">FIRST NAME</label> <br>
+                        <input type="text" name='first_name'>
+                     </div>
+                        <div>
+                            <label for="">LAST NAME</label><br>
+                            <input type="text" name='last_name' >
+                        </div>
+                        <div>
+                            <label for="">email</label><br>
+                            <input type="text" name='email' >
+                        </div>
+                        <div>
+                            <label for="">password</label><br>
+                            <input type="password" name='password1'>
+                        </div>
+                        <div>
+                            <label for="">confirm password</label><br>
+                            <input type="password" name='password2'>
+                        </div>
+                        <div>
+                            {% comment %} <label for="">BIRTHDATE</label><br>
+                            <div class="birthdate">
+                                <div><select name="" id="">
+                                   <option value=""disabled selected>Month</option>
+                                   <option value="">January</option>
+                                   <option value="">February</option>
+                                   <option value="">March</option>
+                                   <option value="">April</option>
+                                   <option value="">May</option>
+                                   <option value="">June</option>
+                                   <option value="">July</option>
+                                   <option value="">August</option>
+                                   <option value="">September</option>
+                                   <option value="">October</option>
+                                   <option value="">November</option>
+                                   <option value="">December</option>
+                                </select></div> {% endcomment %}
+                                {% comment %} <div><select name="" id="">
+                                  <option value="" disabled selected>Day</option>
+                                  <option value="">1</option>
+                                  <option value="">2</option>
+                                  <option value="">3</option>
+                                  <option value="">4</option>
+                                  <option value="">5</option>
+                                  <option value="">6</option>
+                                  <option value="">7</option>
+                                  <option value="">8</option>
+                                  <option value="">9</option>
+                                  <option value="">10</option>
+                                  <option value="">11</option>
+                                  <option value="">12</option>
+                                  <option value="">13</option>
+                                  <option value="">14</option>
+                                  <option value="">15</option>
+                                  <option value="">16</option>
+                                  <option value="">17</option>
+                                  <option value="">18</option>
+                                  <option value="">19</option>
+                                  <option value="">20</option>
+                                  <option value="">21</option>
+                                  <option value="">22</option>
+                                  <option value="">23</option>
+                                  <option value="">24</option>
+                                  <option value="">25</option>
+                                  <option value="">26</option>
+                                  <option value="">27</option>
+                                  <option value="">28</option>
+                                  <option value="">29</option>
+                                  <option value="">30</option>
+                                  <option value="">31</option>
+    
+                                </select></div> {% endcomment %}
+                                {% comment %} <div><select name="" id="">
+                                    <option value="" disabled selected>Year</option>
+                                    <option value="">2000</option>
+                                    <option value="">2001</option>
+                                    <option value="">2002</option>
+                                    <option value="">2003</option>
+                                    <option value="">2004</option>
+                                    <option value="">2005</option>
+                                    <option value="">2006</option>
+                                    <option value="">2007</option>
+                                    <option value="">2008</option>
+                                    <option value="">2009</option>
+                                    <option value="">2010</option>
+                                    <option value="">2011</option>
+                                    <option value="">2012</option>
+                                    <option value="">2013</option>
+                                    <option value="">2014</option>
+                                    <option value="">2015</option>
+                                    <option value="">2016</option>
+                                    <option value="">2017</option>
+                                    <option value="">2018</option>
+                                    <option value="">2019</option>
+                                    <option value="">2020</option>
+                                    <option value="">2021</option>
+                                    <option value="">2022</option>
+                                    <option value="">2023</option>
+                                </select></div> {% endcomment %}
+                            </div>
+                        </div>
+                        {% comment %} <div>
+                            <label for="">GENDER</label><br>
+                           <select name=""value="Select" id="">
+                            <option value="" disabled selected>Select</option>
+                            <option value="">Man</option>
+                            <option value="">Woman</option>
+                            <option value="">Non-Binary</option>
+                            <option value="">Prefer not to say</option>
+    
+                           </select>
+                        </div> {% endcomment %}
+                 </div>
+    
+            </form>
+        </div>
+        <div class="form__text bottom">
+            Hulu will use your data to personalize and improve your Hulu experience and to send you information about Hulu. You can change your communication preferences at any time. We may use your data as described in our <a href="#"style="text-decoration: none;color: #176EE1;"> Privacy Policy</a>, including sharing it with <a href="#" style="text-decoration: none;color: #176EE1;">The Walt Disney Family of Companies</a> . By clicking “CONTINUE” below you agree to our <a href="#" style="text-decoration: none;color: #176EE1;">Subscriber Agreement</a>  and acknowledge that you have read our <a href="" style="text-decoration: none;color: #176EE1;"> Privacy Policy</a>
+        </div>
+        <div class="button__wrapper">
+           <input type="submit" >
+        </div>
+        <footer>
+            <ul>
+                <!-- <li><a href=""> <img src="images/ads.png" alt="">About Ads</a> </li> -->
+                <li><a href="">Subscriber Agreement</a> </li>
+                <li><a href=""> Privacy Policy</a></li>
+                <li><a href="">Do Not Sell or Share My Personal Information</a> </li>
+                <li> <a href="">Your US State Privacy Rights</a></li>
+                <li> <a href="">©2023 Hulu, LLC</a></li> 
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
